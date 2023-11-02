@@ -2,12 +2,12 @@
 function loadingAnimation(){
     gsap.from("#page1 h1",{
         opacity:0,
-        y:250,
+        y:200,
         delay:0.5,
-        duration: 0.9,
-        stagger:0.3 
+        duration: 0.7,
+        stagger:0.2 
     })
-    gsap.from("#page1 #video-container",{
+    gsap.from("#page1 #video-container #video",{
         opacity:0,
         y:200,
         delay:0.9,
@@ -35,7 +35,7 @@ function videoAnimation() {
     });
   });
 
-  videoContainer.addEventListener("mousemove", function (mousePosition) {
+  document.addEventListener("mousemove", function (mousePosition) {
     gsap.to(playBtn, {
       left: mousePosition.x-30,
       top: mousePosition.y-30,
